@@ -2,11 +2,9 @@ class Solution {
     public int[] searchRange(int[] nums, int target) {
         int[] ans = {-1, -1};
         
-        int first = occuranceSearch(nums, target, true);
-        int last = occuranceSearch(nums, target, false);
-        
-        ans[0] = first;
-        ans[1] = last;
+        ans[0] = occuranceSearch(nums, target, true);
+        if(ans[0] != -1)
+            ans[1] = occuranceSearch(nums, target, false);
         
         return ans;
     }
