@@ -1,4 +1,5 @@
 class Solution {
+    // https://takeuforward.org/data-structure/4-sum-find-quads-that-add-up-to-a-target-value/
     public List<List<Integer>> fourSum(int[] num, int target) {
         ArrayList<List<Integer>> res = new ArrayList<List<Integer>>();
         
