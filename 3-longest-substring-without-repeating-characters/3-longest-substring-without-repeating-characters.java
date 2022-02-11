@@ -10,8 +10,8 @@ class Solution {
             boolean isExist = existingChars.contains((Character)s.charAt(j));
             
             if(!isExist){
-                maxCount = Math.max(maxCount, existingChars.size()+1);
                 existingChars.add(s.charAt(j));
+                maxCount = Math.max(maxCount, existingChars.size());
                 j++;
             }else{
                existingChars.remove((Character)s.charAt(i));
