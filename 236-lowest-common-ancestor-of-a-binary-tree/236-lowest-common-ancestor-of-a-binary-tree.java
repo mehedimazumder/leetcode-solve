@@ -16,9 +16,6 @@ class Solution {
         
         if(left != null && right != null) return root;
         
-        if(root == p || root == q)
-            return root;
-        
         return left != null ? left : right;
     }
 }
