@@ -1,3 +1,4 @@
+// https://www.youtube.com/watch?v=x8WVCreZHMo
 class Solution {
     public long maxTaxiEarnings(int n, int[][] rides) {
         Map<Integer, List<int[]>> trips = new HashMap<>();
