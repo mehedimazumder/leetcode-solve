@@ -20,22 +20,22 @@ class Solution {
         
         ListNode secondHalf = reverse(slow);
         
-        reorderList(head, secondHalf, true);
+        reorderList(head, secondHalf);
     }
     
-    public ListNode reorderList(ListNode head1, ListNode head2, boolean isFirstList){
+    public ListNode reorderList(ListNode head1, ListNode head2){
         if(head1 == null)
             return null;
         if(head2 == null)
             return null;
         
-        if(isFirstList){
-            head1.next = reorderList(head2, head1.next, false);
+        // if(isFirstList)
+            head1.next = reorderList(head2, head1.next);
             return head1;
-        }else{
-            head1.next = reorderList(head2, head1.next, true);
-            return head1;
-        }
+        // }else{
+        //     head1.next = reorderList(head2, head1.next);
+        //     return head1;
+        // }
     }
     
     public ListNode reverse(ListNode head) {
