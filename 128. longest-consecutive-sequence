@@ -9,12 +9,14 @@ class Solution {
 
         int longest = 0;
 
-        for (int num : nums) {
+        for (int num : numSet) {
             if (!numSet.contains(num - 1)) {
                 int length = 1;
+                int currNum = num;
 
-                while (numSet.contains(num + length)) {
-                    length++;
+                while (numSet.contains(currNum + 1)) {
+                    length = length + 1;
+                    currNum = currNum + 1;
                 }
 
                 longest = Math.max(longest, length);
